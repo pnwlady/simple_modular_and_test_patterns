@@ -1,3 +1,3 @@
-const greet = require(__dirname + './greet');
+const greet = require(__dirname + '/../lib/greet');
 
-console.log(greet());
+console.log(greet(Jessica));
