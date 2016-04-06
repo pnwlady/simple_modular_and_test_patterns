@@ -1,3 +1,5 @@
-This code requires greet.js to export a greet function/object that passes a greeting with the name argument, that has been called with an assignment.
+To use this code you going to require greet.js.
 
-It passes one test.
+4/5
+Added package.json file with dependencies.
+Added .gitignore
