@@ -30,7 +30,7 @@
     "expect"
   ],
   "author": "heidi laursen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/pnwlady/simple_modular_and_test_patterns/issues"
   },
