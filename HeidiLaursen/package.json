@@ -10,7 +10,9 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "gulp": "^3.9.1",
+    "gulp-build": "^0.5.3",
     "gulp-eslint": "^2.0.0",
+    "gulp-watch": "^4.3.5",
     "mocha": "^2.4.5"
   },
   "scripts": {

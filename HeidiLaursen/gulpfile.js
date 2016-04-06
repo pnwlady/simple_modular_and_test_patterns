@@ -1,13 +1,36 @@
 'use strict';
 
 var gulp = require('gulp');
-var eslint = require('gult-eslint');
+var eslint = require('gulp-eslint');
+var watch = require('gulp-watch');
 
-//add file here?
+var files = ['index.js', 'lib/**/*.js', 'bin/**/*.js', 'gulpfile.js'];
 
-//write lint task
-gulp.task('default', function() {
-  // place code for your default task here
+gulp.task('lint:test', () => {
+    return gulp.src('./test/**/*test.js')
+    .pipe(eslint({
+        rules: {
+            'indent': ['error', 2]
+        },
+        envs: [
+            'mocha'
+        ]
+    }))
+    .pipe(eslint.format());
+});
+gulp.task('lint:nontest', () => {
+    return gulp.src(files)
+    .pipe(eslint({
+        rules: {
+            'indent': ['error', 2]
+        }
+    }))
+    .pipe(eslint.format());
 });
 
-//call lint task
+gulp.task('watchFiles', () => {
+    gulp.watch(files, ['lint:nontest', 'lint:test']);
+});
+
+gulp.task('lint', ['lint:nontest', 'lint:test']);
+gulp.task('default', ['lint']);
