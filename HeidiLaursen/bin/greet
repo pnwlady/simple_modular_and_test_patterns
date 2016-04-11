@@ -6,4 +6,4 @@ var greeting = module.exports = function () {
     return greet(process.argv[2]);
 };
 
-process.stdout.write(greeting() + ''\n');
+process.stdout.write(greeting() + '\n');
