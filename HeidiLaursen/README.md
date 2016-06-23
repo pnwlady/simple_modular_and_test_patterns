@@ -1,5 +1,9 @@
-To use this code you going to require greet.js.
+### To Run
+```
+node greet "your name"
+```
 
-4/5
-Added package.json file with dependencies.
-Added .gitignore
+### To Test
+```
+gulp
+```
