@@ -1,8 +1,10 @@
-module.exports = var greetObj = greet () {
-  function (name) {
-    const greeting = "Hello";
-    return greeting + " " + name;
-  }
+var GreetObj = module.exports = function() {
+  GreetObj.prototype.response = function(name) {
+    return "Hello, " + name "!";
+  };
 };
 
-greetObj("Janice");
+var visitor = new Greet();
+if (process.argv[2]) {
+  process.stdout(visitor.response(process.argv[2]));
+}
