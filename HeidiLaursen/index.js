@@ -1,1 +1,3 @@
-module.exports = require(__dirname + '/lib/greet');
+const hi = require(__dirname + '/lib/greet');
+
+hi.greet('Heidi');

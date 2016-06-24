@@ -34,7 +34,7 @@ gulp.task('lint:nontest', () => {
 
 gulp.task('mocha', () => {
   return gulp.src(testFiles)
-  .pipe(mocha());
+  .pipe(mocha({ reporter: 'nyan' }));
 });
 
 gulp.task('watchFiles', () => {
