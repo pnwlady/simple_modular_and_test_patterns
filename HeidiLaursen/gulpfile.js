@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
 var mocha = require('gulp-mocha');
-var watch = require('gulp-watch');
 
 var files = ['index.js', 'lib/**/*.js', 'bin/**/*.js', 'gulpfile.js'];
 var testFiles = ['./test/**/*test.js'];
@@ -37,8 +36,8 @@ gulp.task('mocha', () => {
   .pipe(mocha({ reporter: 'nyan' }));
 });
 
-gulp.task('watchFiles', () => {
-  gulp.watch(files, ['lint:nontest', 'lint:test']);
+gulp.task('watch', () => {
+  gulp.watch([files, testFiles], ['default']);
 });
 
 gulp.task('lint', ['lint:nontest', 'lint:test']);
