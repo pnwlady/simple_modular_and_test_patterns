@@ -1,6 +1,6 @@
 ### To Run
 ```
-node greet "your name"
+node index 'your name'
 ```
 
 ### To Test

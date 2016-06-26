@@ -2,8 +2,4 @@
 
 var greet = require(__dirname + '/../lib/greet').greet;
 
-var hi = module.exports = function() {
-  return greet(process.argv[2]);
-};
-
-process.stdout.write(greet() + '\n');
+process.stdout.write(greet(process.argv[2]) + '\n');

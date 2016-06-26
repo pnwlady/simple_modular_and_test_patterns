@@ -1,9 +1,8 @@
-const visitor = module.exports = exports = {};
-
-visitor.greet = function(name) {
+const greet = module.exports = function(name) {
   return 'Hello, ' + name;
 };
 
 if (process.argv[2]) {
-  process.stdout('Hello, ' + process.argv[2]);
+  var visitor = process.argv[2];
+  process.stdout.write(greet(visitor + '\n'));
 }
