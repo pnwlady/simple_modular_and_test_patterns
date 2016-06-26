@@ -1,3 +1,3 @@
 const hi = require(__dirname + '/lib/greet');
 
-hi.greet('Heidi');
+process.stdout.write(hi.greet('Heidi' + '\n'));
